@@ -1,27 +1,28 @@
 <script type="module">
+import { ID } from "./ID.js";
 import { KItriKIme } from "./kit.js";
 import { HOLD } from "./HOLD.core.js";
 import { OPTACORE_Core } from "./OPTACORE/core.js";
 
-const frame = "minTH:FRAME";
+console.log("minTH → RUN");
 
 // 1 — core
-console.log("minTH core → RUN");
+OPTACORE_Core.run(ID);
 
 // 2 — state
-HOLD.state("minTH_frame", frame);
+HOLD.state("minTH_frame", ID);
 
 // 3 — freeze
-HOLD.freeze("minTH_frame", frame);
+HOLD.freeze("minTH_frame", ID);
 
 // 4 — pipe
-console.log("minTH pipe → RUN-Pipeline");
+console.log("minTH → PIPE");
 
 // 5 — result
-HOLD.state("minTH_result", { frame });
+HOLD.state("minTH_result", { ID });
 
 // 6 — resolver
-const stability = KItriKIme(frame);
+const stability = KItriKIme(ID);
 
 // 7 — loader
 OPTACORE_Core.load("minTH");
@@ -31,9 +32,6 @@ HOLD.state("minTH_save", stability);
 
 // 9 — transfer
 if (stability === 1) {
-  console.log("minTH → RUN stabil");
-  window.location.href = "maxTH.html";
-} else {
-  console.log("minTH → RUN instabil");
+    window.location.href = "maxTH.html";
 }
 </script>
