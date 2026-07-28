@@ -1,0 +1,10 @@
+﻿Feld,Name,Zweck
+1,core,Hauptlogik
+2,state,Zustand
+3,freeze,Sperre
+4,pipe,Ablauf
+5,result,Output
+6,resolver,Übersetzer
+7,loader,Laden
+8,save,Speichern
+9,transfer,Übergabe
