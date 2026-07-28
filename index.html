@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>iki1uc · ID M</title>
+<style>
+body {
+  background:#000;
+  color:#0f0;
+  font-family: monospace;
+  padding:40px;
+}
+#out {
+  font-size:22px;
+  margin-bottom:20px;
+}
+.module {
+  margin:6px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div id="out">iki1uc · ID lädt…</div>
+
+<div class="module">OPTACORE_Core</div>
+<div class="module">VECTOR_Stages</div>
+<div class="module">NC_HUB_All</div>
+<div class="module">HOLD_DeepFreeze</div>
+<div class="module">RESPO_NC_Integration</div>
+<div class="module">minTH_CUBE_MIND</div>
+
+<script type="module">
+import { ID } from "./ID.js";
+import { KItriKIme } from "./kit.js";
+import { HOLD } from "./HOLD.core.js";
+import { OPTACORE_Core } from "./OPTACORE/core.js";
+
+document.getElementById("out").innerText = "ID = " + ID;
+
+// HOLD DeepFreeze
+HOLD.freeze("ID", ID);
+
+// OPTACORE Core
+OPTACORE_Core.load(ID);
+
+// Resolver
+const stability = KItriKIme(ID);
+
+// Transfer
+if (stability === 1) {
+    window.location.href = "minTH.html";
+}
+</script>
+
+</body>
+</html>
 
