@@ -1,0 +1,10 @@
+﻿Feld,Name,Zweck,minTH‑Integration
+1,core,Hauptlogik,minTH Kernlogik
+2,state,Zustand,minTH Frame‑State
+3,freeze,Sperre,HOLD.freeze() für minTH
+4,pipe,Ablauf,minTH → RUN‑Pipeline
+5,result,Output,minTH.result.json
+6,resolver,Übersetzer,KItriKIme() als Resolver
+7,loader,Laden,minTH.html lädt OPTACORE
+8,save,Speichern,HOLD.state speichert Frame
+9,transfer,Übergabe,minTH → maxTH.html
